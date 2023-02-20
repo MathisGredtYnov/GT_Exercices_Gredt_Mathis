@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 300vh;
+    width: 100vw;
+}
+
+/* début header*/
+
+.header {
+    box-sizing: border-box;
+    font-family: "GothamBlack";
+    background-color: #1B1C14;
+    color: #ffffff;
+    padding: 10px;
+    height: 75px;
+    width: 100vw;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo p {
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+}
+.logo img {
+    padding-right: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.lien {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_button, .menu_button + label  {
+    display: none;
+}
+
+.menu{
+    display: flex;
+    flex: end;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+li {
+    padding: 0px 25px;
+    display: inline;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.burger {
+    cursor: pointer;
+    margin-right: 25px;
+}
+/* Header End */
+/* background */
+
+.background {
+    height: 100%;
+    width: 100%;
+    color: hsl(324, 70%, 45%);
+    animation: wheelHueColor 20s infinite;
+    background-color: currentColor;
+  }
+  @supports (background-blend-mode: overlay) {
+    .background {
+      background-image: linear-gradient(45deg, white 10%, black 90%);
+      background-blend-mode: overlay;
+    }
+  }
+  @keyframes wheelHueColor {
+    from, to { color: hsl(324, 70%, 45%); }
+    10%      { color: hsl(360, 65%, 45%); }
+    20%      { color: hsl( 36, 80%, 45%); }
+    30%      { color: hsl( 72, 75%, 35%); }
+    40%      { color: hsl(108, 65%, 35%); }
+    50%      { color: hsl(144, 75%, 35%); }
+    60%      { color: hsl(180, 75%, 35%); }
+    70%      { color: hsl(216, 60%, 45%); }
+    80%      { color: hsl(252, 65%, 50%); }
+    90%      { color: hsl(288, 60%, 40%); }
+}
+
+
+@media screen and (max-width: 991px) {
+    /* Header */
+    .menu_button, .menu_button + label  {
+        display: block;
+    }
+    .menu_button + label {
+        cursor: pointer;
+    }
+    .menu_button + label .close {
+        display: none;
+    }
+    .menu_button + label .burger {
+        display: block;
+    }
+    .menu_button:checked + label .close {
+        display: block;
+    }
+    .menu_button:checked + label .burger {
+        display: none;
+    }
+    .menu {
+        background-color: #232429;
+        position: absolute;
+        top: 75px;
+        right: 0px;
+        border-bottom-left-radius: 10px;
+        padding: 0px 0px 10px 10px;
+        display: none;
+    }
+
+    .menu_button {
+        opacity: 0;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    li {
+        padding: 10px;
+        font-size: 1.5em;
+        text-align: right;
+        border-top: 1px solid #195FA5;
+    }
+    .menu_button:checked ~ .menu {
+        display: block;
+    }
+    /* Header End */
+}
