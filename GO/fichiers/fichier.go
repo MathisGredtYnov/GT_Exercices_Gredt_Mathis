@@ -18,8 +18,10 @@ func MenuFichier() {
 	fmt.Println("5 - Quitter")
 	fmt.Scan(&choix)
 	if boucle == false {
-		if choix < 0 || choix > 5 {
+		if choix != 1 && choix != 2 && choix != 3 && choix != 4 && choix != 5 {
+			fmt.Println("\033[H\033[2J")
 			fmt.Println("Erreur de saisie")
+			MenuFichier()
 		}
 		switch choix {
 		case 1:
