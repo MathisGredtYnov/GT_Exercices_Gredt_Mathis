@@ -5,6 +5,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  height: 5000px;
   
 }
 div {
@@ -17,14 +18,23 @@ div {
   
 }
 
+::-webkit-scrollbar {
+  border-radius: 8px;
+  
+}
 
 div::-webkit-scrollbar {
   width: 8px;
+  background: #aaa;
 }
 
 div::-webkit-scrollbar-thumb {
-  background: #aaa;
   border-radius: 8px;
-
-
+  background-color: blue;
 }
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: red;
+}
+
