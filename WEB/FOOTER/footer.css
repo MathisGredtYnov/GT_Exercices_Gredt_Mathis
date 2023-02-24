@@ -49,8 +49,9 @@ body {
 
 h1 {
     color: white;
-    font-size: 0.8em;
+    font-size: 15px;
 }
+
 .logo {
     background-color: transparent;
     display: flex;
@@ -94,7 +95,7 @@ h1 {
 
 .text {
     color: white;
-    font-size: 0.5em;
+    font-size: 10px;
     padding: 5px;
 }
 
@@ -110,7 +111,7 @@ h1 {
 
 p{
     color: white;
-    font-size: 0.2em;
+    font-size: 7px;
 }
 
 .info {
@@ -123,7 +124,7 @@ p{
 
 .text2 {
     color: white;
-    font-size: 0.1em;
+    font-size: 6px;
     padding: 5px;
 }
 
