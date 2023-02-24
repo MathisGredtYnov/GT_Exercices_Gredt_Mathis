@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+}
+
+.formulaire {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.choix {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem;
+}
